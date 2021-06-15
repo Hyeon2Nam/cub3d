@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/15 12:15:08 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/15 12:18:08 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ int		set_color(t_game *map, char *buf, int key)
 	{
 		rgb[i] = ft_atoi(temp[i]);
 		if ((rgb[i] < 0 || rgb[i] > 255) || !rgb[i])
-			return (0);
+			error_handler("Error\ninvaild rgb color");
 	}
 	color = (rgb[0] * 256 * 256) + (rgb[1] * 256) + rgb[2];
 	if (key)
