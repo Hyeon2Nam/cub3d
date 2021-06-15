@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/15 12:18:08 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/15 12:20:56 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int		check_option(t_game *map, char *buf)
 			pass += set_color(map, &buf[1], 0);
 	}
 	else
-		error_handler("Error\nUsgined keyword");
+		error_handler("Error\nUnsgined keyword");
 	return (pass);
 }
 
