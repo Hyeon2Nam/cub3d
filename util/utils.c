@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:52:53 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/14 12:33:44 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/15 12:22:49 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		is_current_file(char *str, char *file)
 	while (clen)
 	{
 		if (str[slen--] != file[clen--])
-			error_handler("Error\nInput .cub file");
+			error_handler("Error\nInput current file");
 	}
 	return (1);
 }
