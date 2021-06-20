@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:02:31 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/12 16:12:43 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:57:49 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	raycasting(t_game *info)
 	t_wall_info		wall_info;
 	int				x;
 
-	floor_cell(info);
+	floor_ceiling(info);
 	x = -1;
 	while (++x < info->w)
 	{

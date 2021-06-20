@@ -6,13 +6,13 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 16:07:02 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:17:27 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:59:19 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-void	floor_cell(t_game *info)
+void	floor_ceiling(t_game *info)
 {
 	t_floor_info	floor;
 	int				y;

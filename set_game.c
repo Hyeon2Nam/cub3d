@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:42:16 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/14 11:39:58 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:57:17 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	start_game(t_game *info)
 	info_init(info);
 	set_buf_and_tex(info);
 	load_texture(info);
-	info->win = mlx_new_window(info->mlx, info->w, info->h, "Raycasterc");
+	info->win = mlx_new_window(info->mlx, info->w, info->h, "cub3d");
 	info->img.img = mlx_new_image(info->mlx, info->w, info->h);
 	info->img.data = (int *)mlx_get_data_addr(info->img.img,
 		&info->img.bpp, &info->img.size_l, &info->img.endian);
