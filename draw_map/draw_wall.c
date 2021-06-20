@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:30:11 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 15:03:13 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:24:38 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	draw_wall(t_game *info, t_wall_info *wall_info, int x)
 {
+	calc_line_height(info, wall_info);
 	if (wall_info->side == 0)
 		wall_info->wall_x = info->posy + wall_info->perp_wall_dist *
 			wall_info->ray_diry;
 	else
 		wall_info->wall_x = info->posx + wall_info->perp_wall_dist *
 			wall_info->ray_dirx;
-	calc_line_height(info, wall_info);
 	wall_info->wall_x -= floor(wall_info->wall_x);
 	wall_info->tex_x = (int)(wall_info->wall_x * (double)TEXWIDTH);
 	calc_tex(wall_info);
