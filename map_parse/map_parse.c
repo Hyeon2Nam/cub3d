@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/15 12:20:56 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:43:54 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	check_blank(char *buf, char **temp, int *blank)
 {
 	if (*blank == -1 && ft_strlen(buf) > 0)
 		error_handler("Error\ninvaild map (New line)");
-	if (*blank && !ft_strlen(buf))
+	if (*blank && ft_strlen(buf) == 0)
 		*blank = -1;
-	if (ft_strlen(buf) != 0)
+	if (ft_strlen(buf) > 0)
 	{
 		*temp = ft_strjoin(*temp, buf);
 		*temp = ft_strjoin(*temp, "\n");
@@ -83,10 +83,7 @@ int		set_tex_path(t_game *map, char *buf, int key)
 
 	line = ft_split(buf, ' ');
 	if (line[2] || !line[1])
-	{
-		ft_free(line);
 		error_handler("Error\ninvaild texture path");
-	}
 	if (!(is_current_file(line[1], ".xpm")))
 		error_handler("Error\ninvaild texture");
 	if (key == 1)
@@ -122,7 +119,7 @@ int		set_color(t_game *map, char *buf, int key)
 	if (key)
 		map->img.floor = color;
 	else
-		map->img.cell = color;
+		map->img.ceiling = color;
 	ft_free(temp);
 	return (1);
 }

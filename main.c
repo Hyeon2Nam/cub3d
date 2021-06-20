@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:28:10 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/14 12:30:52 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:41:16 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int		main(int argc, char *argv[])
 		{
 			fd = open(argv[1], O_RDONLY);
 			if (fd < 0)
-				error_handler("Error\nFile open error\n");
+				error_handler("Error\nFile open error");
 			if (!map_parse(fd, &map))
-				error_handler("Error\ninvalid file\n");
+				error_handler("Error\ninvalid file");
 			start_game(&map);
 		}
 	}
 	else if (argc > 2)
-		error_handler("Error\nToo many file\n");
+		error_handler("Error\nToo many files");
 	else
-		error_handler("Error\nInput .cub file\n");
+		error_handler("Error\nInput .cub file");
 }
 
 void	error_handler(char *text)

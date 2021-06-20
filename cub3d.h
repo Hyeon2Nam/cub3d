@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/15 11:51:45 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:39:48 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct	s_img
 	int		endian;
 	int		bpp;
 	int		floor;
-	int		cell;
+	int		ceiling;
 }				t_img;
 
 typedef struct	s_key

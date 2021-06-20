@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 16:07:02 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/12 16:19:15 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:17:27 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	draw_floor(t_game *info, t_floor_info *floor, int y)
 		floor->floory += floor->floor_stepy;
 		color = info->img.floor;
 		info->buf[y][x] = color;
-		color = info->img.cell;
+		color = info->img.ceiling;
 		info->buf[info->h - y - 1][x] = color;
 	}
 }

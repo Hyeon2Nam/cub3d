@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:52:53 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/15 12:22:49 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:40:57 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,16 @@ int		set_buf_and_tex(t_game *info)
 int		is_current_file(char *str, char *file)
 {
 	int slen;
-	int clen;
+	int flen;
 
 	slen = ft_strlen(str);
-	clen = ft_strlen(file);
-	if (slen < 4)
-		error_handler("Error\nInput .cub file");
-	while (clen)
+	flen = ft_strlen(file);
+	if (slen < 5)
+		error_handler("Error\nInput Proper Files");
+	while (flen)
 	{
-		if (str[slen--] != file[clen--])
-			error_handler("Error\nInput current file");
+		if (str[slen--] != file[flen--])
+			error_handler("Error\nInput Proper Files");
 	}
 	return (1);
 }
