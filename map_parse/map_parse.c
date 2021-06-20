@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 17:20:53 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 17:23:31 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		map_parse(int fd, t_game *map)
 	{
 		if (op_num == 6)
 			check_blank(buf, &temp, &blank);
-		else
+		if (op_num != 6 && buf[0] != 0)
 			op_num += check_option(map, buf);
 		free(buf);
 	}
@@ -57,23 +57,18 @@ int		check_option(t_game *map, char *buf)
 	int pass;
 
 	pass = 0;
-	if (ft_strchr("NSWEFC", buf[0]))
-	{
-		if (buf[0] == 'N' && buf[1] == 'O')
-			pass += set_tex_path(map, buf, 1);
-		else if (buf[0] == 'S' && buf[1] == 'O')
-			pass += set_tex_path(map, buf, 2);
-		else if (buf[0] == 'W' && buf[1] == 'E')
-			pass += set_tex_path(map, buf, 3);
-		else if (buf[0] == 'E' && buf[1] == 'A')
-			pass += set_tex_path(map, buf, 4);
-		else if (buf[0] == 'F' && buf[1] == ' ')
-			pass += set_color(map, &buf[1], 1);
-		else if (buf[0] == 'C' && buf[1] == ' ')
-			pass += set_color(map, &buf[1], 0);
-		else
-			error_handler("Error\nUnspecified identifier");
-	}
+	if (buf[0] == 'N' && buf[1] == 'O')
+		pass += set_tex_path(map, buf, 1);
+	else if (buf[0] == 'S' && buf[1] == 'O')
+		pass += set_tex_path(map, buf, 2);
+	else if (buf[0] == 'W' && buf[1] == 'E')
+		pass += set_tex_path(map, buf, 3);
+	else if (buf[0] == 'E' && buf[1] == 'A')
+		pass += set_tex_path(map, buf, 4);
+	else if (buf[0] == 'F' && buf[1] == ' ')
+		pass += set_color(map, &buf[1], 1);
+	else if (buf[0] == 'C' && buf[1] == ' ')
+		pass += set_color(map, &buf[1], 0);
 	else
 		error_handler("Error\nUnspecified identifier");
 	return (pass);
