@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:02:31 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:18:04 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 14:49:20 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,9 +107,9 @@ void	floor_ceiling(t_game *info)
 		x = 0;
 		while (++x < info->w)
 		{
-			color = info->img.floor;
-			info->buf[y][x] = color;
 			color = info->img.ceiling;
+			info->buf[y][x] = color;
+			color = info->img.floor;
 			info->buf[info->h - y - 1][x] = color;
 		}
 	}
