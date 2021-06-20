@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:02:31 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:57:49 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 14:16:25 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,24 @@ void	calc_prep_wall_dist(t_game *info, t_wall_info *wall_info)
 	else
 		wall_info->perp_wall_dist = (wall_info->map_y - info->posy +
 			(1 - wall_info->step_y) / 2) / wall_info->ray_diry;
+}
+
+void	floor_ceiling(t_game *info)
+{
+	int	y;
+	int	x;
+	int	color;
+
+	y = -1;
+	while (++y < info->h / 2)
+	{
+		x = 0;
+		while (++x < info->w)
+		{
+			color = info->img.floor;
+			info->buf[y][x] = color;
+			color = info->img.ceiling;
+			info->buf[info->h - y - 1][x] = color;
+		}
+	}
 }

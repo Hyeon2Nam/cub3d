@@ -6,7 +6,7 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 13:25:40 by hyenam            #+#    #+#              #
-#    Updated: 2021/06/15 11:51:28 by hyenam           ###   ########.fr        #
+#    Updated: 2021/06/20 14:16:40 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ GNL_NAME = get_next_line.c \
 SRCS =	./util/key_hook.c ./util/key_move.c ./util/malloc_free.c ./util/set_dir.c ./util/utils.c \
 		./gnl/get_next_line.c ./gnl/get_next_line_utils.c \
 		./map_parse/map_check.c ./map_parse/map_parse.c \
-		./draw_map/draw_floor.c ./draw_map/draw_texture.c ./draw_map/draw_wall.c ./draw_map/raycasting.c \
+		./draw_map/draw_texture.c ./draw_map/draw_wall.c ./draw_map/raycasting.c \
 		set_game.c main.c  
 
 OBJS = $(SRCS:.c=.o)
