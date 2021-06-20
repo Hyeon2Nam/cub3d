@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:30:11 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:20:10 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 14:23:09 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void	do_draw(t_game *info, t_wall_info *wall_info, int x)
 		if (wall_info->side == 1 && wall_info->ray_diry > 0)
 			color = info->texture[3]
 				[TEXHEIGHT * wall_info->tex_y + wall_info->tex_x];
-		if (wall_info->side == 1)
-				color = (color >> 1) & 8355711;
 		info->buf[y][x] = color;
 	}
 }
