@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 15:03:56 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:34:01 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ void			ft_free(char **str);
 
 int				key_press(int key, t_game *info);
 int				key_release(int key, t_game *info);
-int				key_exit(void);
+int				key_exit(t_game *info);
 
 void			key_update(t_game *info);
 void			move_up_down(t_game **info);

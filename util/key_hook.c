@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 17:17:40 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/12 14:19:47 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:33:59 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 int		key_press(int key, t_game *info)
 {
 	if (key == K_ESC)
+	{
+		mlx_destroy_window(info->mlx, info->win);
 		exit(0);
+	}
 	else if (key == K_W || key == K_AR_U)
 		info->key.key_w = 1;
 	else if (key == K_A)
@@ -50,7 +53,8 @@ int		key_release(int key, t_game *info)
 	return (0);
 }
 
-int		key_exit(void)
+int		key_exit(t_game *info)
 {
+	mlx_destroy_window(info->mlx, info->win);
 	exit(0);
 }
