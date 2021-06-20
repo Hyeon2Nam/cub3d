@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:39:48 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:48:40 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,7 @@ void			start_game(t_game *info);
 int				map_check(t_game *map, char *str);
 void			set_line_weight(char **temp, int h, int w);
 void			map_atoi(t_game *map, char **temp_map);
-int				is_vaild(t_game *map, char **temp);
+int				is_correct(t_game *map, char **temp);
 int				check_side(char **arr, int h);
 
 void			raycasting(t_game *info);

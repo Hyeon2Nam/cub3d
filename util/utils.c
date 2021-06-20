@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:52:53 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:40:57 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:53:32 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ int		data_checking(t_game *map, char data, int i, int j)
 			map->map_info.map[i][j] = data - '0';
 	}
 	else
-		error_handler("Error\ninvaild map (Unknow sign)");
+		error_handler("Error\ninvaild map (Unspecified identifier)");
 	return (overlap);
 }

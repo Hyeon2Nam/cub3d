@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:43:54 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 13:53:04 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int		check_option(t_game *map, char *buf)
 			pass += set_color(map, &buf[1], 0);
 	}
 	else
-		error_handler("Error\nUnsgined keyword");
+		error_handler("Error\nUnspecified identifier");
 	return (pass);
 }
 
