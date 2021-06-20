@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:16:52 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 14:17:34 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,26 +88,6 @@ typedef struct	s_game
 	int		tex_num;
 	char	dir;
 }				t_game;
-
-typedef struct	s_floor_info
-{
-	float	row_distance;
-	float	floor_stepx;
-	float	floor_stepy;
-	float	ray_dirx0;
-	float	ray_diry0;
-	float	ray_dirx1;
-	float	ray_diry1;
-	float	floorx;
-	float	floory;
-	float	posz;
-	int		ceiling_texture;
-	int		floor_texture;
-	int		cellx;
-	int		celly;
-	int		tx;
-	int		ty;
-}				t_floor_info;
 
 typedef struct	s_wall_info
 {

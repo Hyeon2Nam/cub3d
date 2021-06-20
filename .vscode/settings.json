@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "cstdlib": "cpp",
-        "locale": "cpp",
-        "ostream": "cpp",
-        "new": "cpp",
-        "__node_handle": "c"
-    }
-}

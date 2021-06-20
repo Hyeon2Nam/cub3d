@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:02:31 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:16:25 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 14:18:04 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,9 @@ void	calc_prep_wall_dist(t_game *info, t_wall_info *wall_info)
 
 void	floor_ceiling(t_game *info)
 {
-	int	y;
-	int	x;
 	int	color;
+	int	x;
+	int	y;
 
 	y = -1;
 	while (++y < info->h / 2)
