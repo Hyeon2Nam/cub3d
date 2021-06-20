@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:30:11 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:23:09 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:03:13 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ void	do_draw(t_game *info, t_wall_info *wall_info, int x)
 	{
 		wall_info->tex_y = (int)wall_info->tex_pos;
 		wall_info->tex_pos += wall_info->step;
-		color = info->texture[wall_info->tex_num][TEXHEIGHT *
-			wall_info->tex_y + wall_info->tex_x];
 		if (wall_info->side == 0 && wall_info->ray_dirx > 0)
 			color = info->texture[1]
 				[TEXHEIGHT * wall_info->tex_y + wall_info->tex_x];
@@ -75,6 +73,4 @@ void	calc_line_height(t_game *info, t_wall_info *wall_info)
 	wall_info->draw_end = wall_info->line_height / 2 + info->h / 2;
 	if (wall_info->draw_end >= info->h)
 		wall_info->draw_end = info->h - 1;
-	wall_info->tex_num = info->map_info.map[wall_info->map_x]
-		[wall_info->map_y] - 1;
 }

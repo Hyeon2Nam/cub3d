@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:17:34 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/20 15:03:56 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ typedef struct	s_game
 	double	rot_speed;
 	int		**buf;
 	int		*texture[4];
-	int		tex_num;
 	char	dir;
 }				t_game;
 
@@ -105,7 +104,6 @@ typedef struct	s_wall_info
 	int		line_height;
 	int		draw_start;
 	int		draw_end;
-	int		tex_num;
 	int		step_x;
 	int		step_y;
 	int		tex_x;
