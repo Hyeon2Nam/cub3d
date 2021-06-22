@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 17:17:40 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 15:33:59 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 14:54:43 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,7 @@ int		key_press(int key, t_game *info)
 
 int		key_release(int key, t_game *info)
 {
-	if (key == K_ESC)
-		exit(0);
-	else if (key == K_W || key == K_AR_U)
+	if (key == K_W || key == K_AR_U)
 		info->key.key_w = 0;
 	else if (key == K_A)
 		info->key.key_a = 0;

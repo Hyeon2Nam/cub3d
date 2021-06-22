@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 17:23:31 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 12:25:56 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		map_parse(int fd, t_game *map)
 void	check_blank(char *buf, char **temp, int *blank)
 {
 	if (*blank == -1 && ft_strlen(buf) > 0)
-		error_handler("Error\ninvaild map (New line)");
+		error_handler("Error\ninvaild map");
 	if (*blank && ft_strlen(buf) == 0)
 		*blank = -1;
 	if (ft_strlen(buf) > 0)
@@ -81,8 +81,7 @@ int		set_tex_path(t_game *map, char *buf, int key)
 	line = ft_split(buf, ' ');
 	if (line[2] || !line[1])
 		error_handler("Error\ninvaild texture path");
-	if (!(is_current_file(line[1], ".xpm")))
-		error_handler("Error\ninvaild texture");
+	is_current_file(line[1], ".xpm");
 	if (key == 1)
 		map->img.no = ft_substr(line[1], 2, ft_strlen(line[1]) - 2);
 	if (key == 2)
@@ -108,8 +107,8 @@ int		set_color(t_game *map, char *buf, int key)
 	i = -1;
 	while (++i < 3)
 	{
-		rgb[i] = ft_atoi(temp[i]);
-		if ((rgb[i] < 0 || rgb[i] > 255) || !rgb[i])
+		rgb[i] = ft_atoi(ft_strtrim(temp[i], " "));
+		if ((rgb[i] < 0 || rgb[i] > 255))
 			error_handler("Error\ninvaild rgb color");
 	}
 	color = (rgb[0] * 256 * 256) + (rgb[1] * 256) + rgb[2];

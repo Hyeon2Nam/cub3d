@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 15:34:01 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 11:52:36 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ typedef struct	s_img
 	char	*so;
 	char	*we;
 	char	*ea;
-	char	*s;
 	int		*data;
 	int		width;
 	int		height;

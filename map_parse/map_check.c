@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 14:37:12 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 13:51:47 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 14:19:20 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	set_line_weight(char **temp, int h, int w)
 	while (++i < h)
 	{
 		len = ft_strlen(temp[i]);
-		if (len != w)
+		if (len < w)
 		{
 			line = (char *)malloc(sizeof(char) * w + 1);
 			if (!line)
@@ -121,11 +121,11 @@ int		check_side(char **arr, int h)
 	{
 		line = ft_strtrim(arr[i], " ");
 		if (!(line[0] - '0' && line[ft_strlen(line) - 1] - '0'))
-			error_handler("Error\ninvaild map (wall)");
+			error_handler("Error\ninvaild map");
 		if (ft_strchr(line, ' '))
 			if (ft_strchr("1 ", line[ft_strchr(line, ' ') - 2]) < 1 ||
 				ft_strchr("1 ", line[ft_strchr(line, ' ')]) < 1)
-				error_handler("Error\ninvaild map (blank)");
+				error_handler("Error\ninvaild map");
 		free(line);
 	}
 	return (1);
