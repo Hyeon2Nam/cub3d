@@ -6,7 +6,7 @@
 #    By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 13:25:40 by hyenam            #+#    #+#              #
-#    Updated: 2021/06/20 14:16:40 by hyenam           ###   ########.fr        #
+#    Updated: 2021/06/22 15:35:21 by hyenam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,28 +16,6 @@ RM = rm -rf
 CFLAGS := -Wall -Wextra -Werror
 INCLUDE = -I. -I./libft -I./gnl -I./mlx
 LIBS = -Lmlx -lmlx -Llibft -lft -framework OpenGL -framework AppKit
-
-UTILS_DIR = ./util/
-UTILS_NAME = key_hook.c \
-		key_move.c \
-		malloc_free.c \
-		set_dir.c \
-		utils.c
-
-PARSE_DIR = ./map_parse/
-PARSE_NAME = map_check.c \
-				map_parse.c
-
-MAP_DIR = ./draw_map/
-MAP_NAME = draw_floor.c \
-			draw_texture.c \
-			draw_wall.c \
-			raycasting.c
-
-GNL_DIR = ./gnl/
-GNL_NAME = get_next_line.c \
-			get_next_line_utils.c
-
 SRCS =	./util/key_hook.c ./util/key_move.c ./util/malloc_free.c ./util/set_dir.c ./util/utils.c \
 		./gnl/get_next_line.c ./gnl/get_next_line_utils.c \
 		./map_parse/map_check.c ./map_parse/map_parse.c \
