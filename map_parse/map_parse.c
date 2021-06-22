@@ -6,13 +6,13 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 12:25:56 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:38:48 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-int		map_parse(int fd, t_game *map)
+void		map_parse(int fd, t_game *map)
 {
 	char	*temp;
 	char	*buf;
@@ -35,7 +35,6 @@ int		map_parse(int fd, t_game *map)
 		error_handler("Error\ninvaild map");
 	close(fd);
 	free(temp);
-	return (1);
 }
 
 void	check_blank(char *buf, char **temp, int *blank)

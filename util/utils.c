@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:52:53 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 12:51:33 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:40:21 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		set_buf_and_tex(t_game *info)
 	return (0);
 }
 
-int		is_current_file(char *str, char *file)
+void	is_current_file(char *str, char *file)
 {
 	int slen;
 	int flen;
@@ -58,7 +58,6 @@ int		is_current_file(char *str, char *file)
 		if (str[slen--] != file[flen--])
 			error_handler("Error\nInput Proper Files");
 	}
-	return (1);
 }
 
 int		data_checking(t_game *map, char data, int i, int j)

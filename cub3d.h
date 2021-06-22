@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 11:52:36 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:40:16 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,7 @@ typedef struct	s_wall_info
 
 void			error_handler(char *text);
 
-int				map_parse(int fd, t_game *map);
+void			map_parse(int fd, t_game *map);
 void			check_blank(char *buf, char **temp, int *blank);
 int				check_option(t_game *map, char *buf);
 int				set_tex_path(t_game *map, char *buf, int key);
@@ -147,7 +147,7 @@ void			load_image(t_game *info, int *texture, char *path, t_img *img);
 
 void			info_init(t_game *info);
 int				set_buf_and_tex(t_game *info);
-int				is_current_file(char *str, char *file);
+void			is_current_file(char *str, char *file);
 int				data_checking(t_game *map, char data, int i, int j);
 
 void			set_dir(t_game *map, char dir, int i, int j);
