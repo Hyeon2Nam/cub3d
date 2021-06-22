@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyenam <hyeon@student.42seoul.kr>          +#+  +:+       +#+        */
+/*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 19:12:28 by riiringim         #+#    #+#             */
-/*   Updated: 2021/04/06 16:16:52 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 18:18:20 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (j < ft_strlen(s2))
 		str[i++] = s2[j++];
 	str[i] = 0;
-	free(s2);
+	free(s1);
 	return (str);
 }
