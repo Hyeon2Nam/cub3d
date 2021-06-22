@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 15:47:40 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:57:34 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int		set_tex_path(t_game *map, char *buf, int key)
 
 	line = ft_split(buf, ' ');
 	if (line[2] || !line[1])
+		error_handler("Error\ninvaild texture path");
+	if (!(line[1][0] == '.' && line[1][1] == '/'))
 		error_handler("Error\ninvaild texture path");
 	is_current_file(line[1], ".xpm");
 	if (key == 1)
