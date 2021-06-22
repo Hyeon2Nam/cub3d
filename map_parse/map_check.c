@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 14:37:12 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 14:19:20 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:46:05 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	map_atoi(t_game *map, char **temp_map)
 		error_handler("Error\nNo player in the map");
 }
 
-int		is_correct(t_game *map, char **temp)
+void	is_correct(t_game *map, char **temp)
 {
 	char	**transposed;
 	int		i;
@@ -101,17 +101,12 @@ int		is_correct(t_game *map, char **temp)
 		transposed[i][j] = 0;
 	}
 	transposed[i] = 0;
-	if (check_side(temp, map->map_info.h) &&
-		check_side(transposed, map->map_info.w))
-	{
-		ft_free(transposed);
-		return (1);
-	}
-	error_handler("Error\ninvaild map");
-	return (0);
+	check_side(temp, map->map_info.h);
+	check_side(transposed, map->map_info.w);
+	ft_free(transposed);
 }
 
-int		check_side(char **arr, int h)
+void	check_side(char **arr, int h)
 {
 	char	*line;
 	int		i;
@@ -128,5 +123,4 @@ int		check_side(char **arr, int h)
 				error_handler("Error\ninvaild map");
 		free(line);
 	}
-	return (1);
 }

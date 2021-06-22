@@ -6,13 +6,13 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 15:38:48 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 15:47:40 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
 
-void		map_parse(int fd, t_game *map)
+void	map_parse(int fd, t_game *map)
 {
 	char	*temp;
 	char	*buf;
