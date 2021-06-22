@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 18:14:28 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 18:21:51 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "mlx/mlx.h"
 # include "key_macos.h"
-# include "libft/libft.h"
 # include "gnl/get_next_line.h"
+# include "libft/libft.h"
 # include <math.h>
 # include <stdio.h>
 # include <stdlib.h>
