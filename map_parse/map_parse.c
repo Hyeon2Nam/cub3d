@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 19:43:50 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 16:00:45 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/22 16:16:08 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ int		set_tex_path(t_game *map, char *buf, int key)
 int		set_color(t_game *map, char *buf, int key)
 {
 	char	**temp;
+	char	*num;
 	int		rgb[3];
 	int		color;
 	int		i;
@@ -106,7 +107,9 @@ int		set_color(t_game *map, char *buf, int key)
 	i = -1;
 	while (++i < 3)
 	{
-		rgb[i] = ft_atoi(ft_strtrim(temp[i], " "));
+		num = ft_strtrim(temp[i], " ");
+		rgb[i] = ft_atoi(num);
+		free(num);
 		if ((rgb[i] < 0 || rgb[i] > 255))
 			error_handler("Error\ninvaild rgb color");
 	}
