@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:03:04 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/01 14:39:18 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/23 14:35:00 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	load_image(t_game *info, int *texture, char *path, t_img *img)
 
 	img->img = mlx_xpm_file_to_image(info->mlx, path,
 		&img->width, &img->height);
+	if (!img->img)
+		error_handler("Error\ninvaild texture");
 	img->data = (int *)mlx_get_data_addr(img->img, &img->bpp,
 		&img->size_l, &img->endian);
 	y = -1;
