@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 14:37:12 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/23 12:12:32 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/23 14:21:23 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ void	check_side(char **arr, int h)
 		if (line[0] - '0' != 1 || line[ft_strlen(line) - 1] - '0' != 1)
 			error_handler("Error\ninvaild map");
 		j = 0;
-		while (++j < (int)ft_strlen(line) - 2)
+		while (++j < (int)ft_strlen(line) - 1)
 			if (line[j] == ' ')
 				if (ft_strchr("1 ", line[j - 1]) < 1 ||
 					ft_strchr("1 ", line[j + 1]) < 1)
