@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 14:37:12 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/23 11:22:32 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/23 11:56:14 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ void	check_side(char **arr, int h)
 {
 	char	*line;
 	int		i;
+	int		j;
 
 	i = -1;
 	while (++i < h)
@@ -117,10 +118,17 @@ void	check_side(char **arr, int h)
 		line = ft_strtrim(arr[i], " ");
 		if (line[0] - '0' != 1 || line[ft_strlen(line) - 1] - '0' != 1)
 			error_handler("Error\ninvaild map");
-		if (ft_strchr(line, ' '))
-			if (ft_strchr("1 ", line[ft_strchr(line, ' ') - 2]) < 1 ||
-				ft_strchr("1 ", line[ft_strchr(line, ' ')]) < 1)
-				error_handler("Error\ninvaild map");
+		j= 0;
+		while (++j < (int)ft_strlen(line) - 2)
+		{
+			if (line[j] == ' ')
+			{
+				if (ft_strchr("1 ", line[ft_strchr(line, ' ') - 2]) < 1 ||
+					ft_strchr("1 ", line[ft_strchr(line, ' ')]) < 1)
+					error_handler("Error\ninvaild map");
+				line[j] = '1';
+			}
+		}
 		free(line);
 	}
 }
