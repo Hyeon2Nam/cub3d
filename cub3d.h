@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 15:21:33 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/23 16:03:56 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/24 20:04:32 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ void			check_side(char **arr, int h);
 void			raycasting(t_game *info);
 void			dda(t_game *info, t_wall_info *wall_info);
 void			calc_side_dist(t_game *info, t_wall_info *wall_info);
-void			calc_prep_wall_dist(t_game *info, t_wall_info *wall_info);
+void			calc_perp_wall_dist(t_game *info, t_wall_info *wall_info);
 void			floor_ceiling(t_game *info);
 
 void			draw_wall(t_game *info, t_wall_info *wall_info, int x);

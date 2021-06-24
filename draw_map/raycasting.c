@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:02:31 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/20 14:49:20 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/24 20:04:15 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	raycasting(t_game *info)
 		wall_info.hit = 0;
 		calc_side_dist(info, &wall_info);
 		dda(info, &wall_info);
-		calc_prep_wall_dist(info, &wall_info);
+		calc_perp_wall_dist(info, &wall_info);
 		draw_wall(info, &wall_info, x);
 	}
 }
@@ -85,7 +85,7 @@ void	calc_side_dist(t_game *info, t_wall_info *wall_info)
 	}
 }
 
-void	calc_prep_wall_dist(t_game *info, t_wall_info *wall_info)
+void	calc_perp_wall_dist(t_game *info, t_wall_info *wall_info)
 {
 	if (wall_info->side == 0)
 		wall_info->perp_wall_dist = (wall_info->map_x - info->posx +
