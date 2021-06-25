@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:52:53 by hyenam            #+#    #+#             */
-/*   Updated: 2021/06/22 15:40:21 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/25 15:19:40 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,13 @@ void	is_current_file(char *str, char *file)
 	int slen;
 	int flen;
 
-	slen = ft_strlen(str);
-	flen = ft_strlen(file);
-	if (slen < 5)
+	slen = ft_strlen(str) - 1;
+	flen = ft_strlen(file) - 1;
+	if (slen < 4)
 		error_handler("Error\nInput Proper Files");
-	while (flen)
-	{
+	while (flen >= 0)
 		if (str[slen--] != file[flen--])
 			error_handler("Error\nInput Proper Files");
-	}
 }
 
 int		data_checking(t_game *map, char data, int i, int j)
