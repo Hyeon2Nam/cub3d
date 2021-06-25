@@ -6,7 +6,7 @@
 /*   By: hyenam <hyenam@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 23:26:11 by riiringim         #+#    #+#             */
-/*   Updated: 2021/06/22 12:14:18 by hyenam           ###   ########.fr       */
+/*   Updated: 2021/06/25 17:26:12 by hyenam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int			ft_atoi(const char *str)
 			res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	if (ft_isspace(str[i]))
+	if (ft_isspace(str[i]) || ft_isalpha(str[i]) )
 		res = 256;
 	return (res * sign);
 }
